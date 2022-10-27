@@ -8,7 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-public class PanelEntradaDatos extends JPanel {
+public class PanelEntradaDatos extends JPanel 
+{
     private JLabel lbImagen;
     private ImageIcon iImagen;
     private JLabel lbColor;
