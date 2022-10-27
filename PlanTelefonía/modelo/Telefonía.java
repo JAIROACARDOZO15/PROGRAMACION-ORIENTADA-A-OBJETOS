@@ -2,12 +2,18 @@ package modelo;
 
 public class Telefonía 
 {
+        //----------------------
+        // Atributos
+         //----------------------
         private String NumeroCelular;
         private String Operador;
         private Integer CantidadMinutos;
         private Double ValorMinutos;
         private Double CostoTotal;
 
+        //----------------------
+        // Metodos
+        //----------------------
         public Telefonía(String NumeroCelular, String Operador, Integer CantidadMinutos, Double ValorMinutos) 
         {
                 this.NumeroCelular = NumeroCelular;
@@ -83,9 +89,9 @@ public class Telefonía
 
         public String toString() 
         {
-            return "Teléfono celular: " + NumeroCelular + "\nEmpresa operador: " + Operador
-                     + "\nMinutos gastados: " + CantidadMinutos + "\nCosto minuto: " + ValorMinutos
-                         + "\nCantidad a pagar: " + CostoTotal;
+            return "El numero de telefono de su plan es: " + NumeroCelular + "\nEl operador es: " + Operador
+                     + "\nMinutos gastados en su plan: " + CantidadMinutos + "\nEl costo de cada minuto: " + ValorMinutos
+                         + "\nEl valor a pagar en su plan es: " + CostoTotal;
 
         }
 }
