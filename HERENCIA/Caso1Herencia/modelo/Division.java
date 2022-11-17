@@ -9,7 +9,7 @@ public class Division extends Operacion
     }
 
     //Metodos
-    public void Restar()
+    public void Dividir()
     {
         resultados = x / y;
     }    
