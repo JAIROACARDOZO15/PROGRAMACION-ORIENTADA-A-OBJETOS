@@ -1,5 +1,6 @@
 package ejecutable;
 
+import java.util.Scanner;
 import modelo.Coordenada;
 
 public class Test 
@@ -24,5 +25,30 @@ public class Test
         {
             System.out.println("Las coordenadas son diferentes");
         }
+        try (Scanner Temp = new Scanner(System.in)) 
+        {
+            int x1;
+            int x2;
+            int y1;
+            int y2;
+            int x;
+            int y;
+            double Distancia_Resultado;
+
+            System.out.print("Enter the values of first point coordinates : ");
+            x1 = Temp.nextInt();
+            y1 = Temp.nextInt();
+            System.out.print("Enter the values of second point coordinates : ");
+            x2 = Temp.nextInt();
+            y2 = Temp.nextInt();
+
+            // Implement pythagorean theorem
+            x = x2-x1;
+            y = y2-y1;
+            Distancia_Resultado = Math.sqrt(x*x + y*y);
+
+            System.out.println("Distance between the two points is : " + Distancia_Resultado);
+        }
+        
     }
 }

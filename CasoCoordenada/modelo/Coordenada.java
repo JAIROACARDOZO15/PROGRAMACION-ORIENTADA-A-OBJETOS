@@ -47,9 +47,5 @@ public class Coordenada
         Coordenada otra = (Coordenada)o;
         return (x==otra.x) && (y==otra.y);
     }
-    
-    public equals(distancia)
-    {
-        
-    }
+            
 }
