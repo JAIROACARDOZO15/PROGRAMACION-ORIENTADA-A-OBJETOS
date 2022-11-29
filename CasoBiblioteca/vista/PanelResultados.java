@@ -12,7 +12,7 @@ public class PanelResultados extends JPanel
     //---------------------------
     // Atributos 
     //---------------------------
-    private JTextArea taResultado;
+    public static JTextArea taResultado;
     private JScrollPane spResultado;
 
     //---------------------------
@@ -24,12 +24,12 @@ public class PanelResultados extends JPanel
     {
         //Definir contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        this.setBackground(Color.CYAN);
 
         //Creacion y edicion del area de texto
         taResultado = new JTextArea();
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,20,447,150);
+        spResultado.setBounds(9,15,512,130);
         this.add(spResultado);
 
         //Borde y titulo
@@ -45,13 +45,15 @@ public class PanelResultados extends JPanel
     }
     
     //Mostrar resultado
-    public void mostrarResultado(int annoI , int edad, int salario, int horasTrabajo, String nombre)
+    public static void mostrarResultado(String texto)
     {
+        taResultado.append(texto);
+    }
 
-        taResultado.append("\nEl nombre del empleado es " + nombre + "\n Trabajo " + horasTrabajo + " horas este mes " );
-        taResultado.append("\nEl empleado nacio el año " + edad);
-        taResultado.append("\nEl empleado lleva " + annoI + " en la empresa");
-        taResultado.append("\nEl salario del usuario es " + salario);
-        
+    public void borrarTa()
+    {
+        taResultado.setText("");
+    }
+    public static void mostrarResultados(String string) {
     }
 }   

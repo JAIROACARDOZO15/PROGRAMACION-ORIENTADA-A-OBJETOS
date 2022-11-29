@@ -3,9 +3,10 @@ package vista;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
+import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
@@ -15,19 +16,16 @@ public class PanelEntrada extends JPanel
     // Atributos 
     //---------------------------
     private JLabel Lbtitulo;
-    private JLabel lbLogo;
     private JLabel Lbnombre;
-    private JLabel Lbedad;
+    private JLabel Lbautor;
     private JLabel LbannoI;
-    private JLabel Lbhoras;
-    private JLabel Lbvalor;
-    private javax.swing.JTextField tfnombre;
-    private javax.swing.JTextField tfedad;
-    private javax.swing.JTextField tfannoI;
-    private javax.swing.JTextField tfhoras;
-    private javax.swing.JTextField tfvalor;
-
-
+    private JLabel lbLibroDeLujo;
+    private static javax.swing.JTextField tfnombre;
+    private static javax.swing.JTextField tfautor;
+    private static javax.swing.JTextField tfannoI;
+    private static ButtonGroup bgEsLibroDeLujo;
+    private static JRadioButton rbEsLibroDeLujo;
+    private JRadioButton rbNoEsLibroDeLujo;
 
     //---------------------------
     // Metodos
@@ -38,83 +36,74 @@ public class PanelEntrada extends JPanel
     {
         //Definir contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.GREEN);
+        this.setBackground(Color.CYAN);
 
         //Crear y agregar etiqueta al titulo
-        Lbtitulo = new JLabel("INFORMACION", JLabel.CENTER);
+        Lbtitulo = new JLabel("BIBLIOTECA", JLabel.CENTER);
         Lbtitulo.setFont(new Font("Arial",Font.BOLD,20));
         Lbtitulo.setForeground(Color.BLACK);
-        Lbtitulo.setBounds(10,10,465,20);
+        Lbtitulo.setBounds(0,10,558,30);
         this.add(Lbtitulo);
 
         //Crear y agregar etiqueta al titulo
         Lbnombre = new JLabel("NOMBRE");
         Lbnombre.setFont(new Font("Arial",Font.BOLD,10));
         Lbnombre.setForeground(Color.BLACK);
-        Lbnombre.setBounds(10,50,465,20);
+        Lbnombre.setBounds(230,55,480,30);
         this.add(Lbnombre);
 
         tfnombre = new JTextField();
         tfnombre.setFont(new Font("Arial", Font.PLAIN, 18));
         tfnombre.setForeground(Color.BLACK);
-        tfnombre.setBounds(100, 50, 80, 20);
+        tfnombre.setBounds(330,55,190,30);
         this.add(tfnombre);
 
         //Crear y agregar etiqueta al titulo
-        Lbedad = new JLabel("EDAD ");
-        Lbedad.setFont(new Font("Arial",Font.BOLD,10));
-        Lbedad.setForeground(Color.BLACK);
-        Lbedad.setBounds(10,100,465,20);
-        this.add(Lbedad);
+        Lbautor = new JLabel("AUTOR ");
+        Lbautor.setFont(new Font("Arial",Font.BOLD,10));
+        Lbautor.setForeground(Color.BLACK);
+        Lbautor.setBounds(230,95,480,30);
+        this.add(Lbautor);
 
-        tfedad = new JTextField();
-        tfedad.setFont(new Font("Arial", Font.PLAIN, 18));
-        tfedad.setForeground(Color.BLACK);
-        tfedad.setBounds(100, 100, 80, 20);
-        this.add(tfedad);
+        tfautor = new JTextField();
+        tfautor.setFont(new Font("Arial", Font.PLAIN, 18));
+        tfautor.setForeground(Color.BLACK);
+        tfautor.setBounds(330,95,190,30);
+        this.add(tfautor);
 
         //Crear y agregar etiqueta al titulo
-        LbannoI = new JLabel("AÑO INGRESO");
+        lbLibroDeLujo = new JLabel("Edición de lujo =");
+        lbLibroDeLujo.setFont(new Font("Arial",Font.BOLD,10));
+        lbLibroDeLujo.setForeground(Color.BLACK);
+        lbLibroDeLujo.setBounds(230,175,480,30);
+        this.add(lbLibroDeLujo);
+
+        //Crear y agregar etiqueta al titulo
+        LbannoI = new JLabel("AÑO ");
         LbannoI.setFont(new Font("Arial",Font.BOLD,10));
         LbannoI.setForeground(Color.BLACK);
-        LbannoI.setBounds(10,150,465,20);
+        LbannoI.setBounds(230,135,480,30);
         this.add(LbannoI);
 
         tfannoI = new JTextField();
         tfannoI.setFont(new Font("Arial", Font.PLAIN, 18));
         tfannoI.setForeground(Color.BLACK);
-        tfannoI.setBounds(100, 150, 80, 20);
+        tfannoI.setBounds(330,135,190,30);
         this.add(tfannoI);
 
-        //Crear y agregar etiqueta al titulo
-        Lbhoras = new JLabel("HORAS TRABAJO");
-        Lbhoras.setFont(new Font("Arial",Font.BOLD,10));
-        Lbhoras.setForeground(Color.BLACK);
-        Lbhoras.setBounds(10,200,465,20);
-        this.add(Lbhoras);
+        bgEsLibroDeLujo = new ButtonGroup();
 
-        tfhoras = new JTextField();
-        tfhoras.setFont(new Font("Arial", Font.PLAIN, 18));
-        tfhoras.setForeground(Color.BLACK);
-        tfhoras.setBounds(100, 200, 80, 20);
-        this.add(tfhoras);
+        rbEsLibroDeLujo = new JRadioButton("SI");
+        rbEsLibroDeLujo.setFont(new Font("serif", Font.PLAIN, 18));
+        rbEsLibroDeLujo.setBounds(390,175,50,30);
+        bgEsLibroDeLujo.add(rbEsLibroDeLujo);
+        this.add(rbEsLibroDeLujo);
 
-         //Crear y agregar etiqueta al titulo
-         Lbvalor = new JLabel("VALOR HORAS");
-         Lbvalor.setFont(new Font("Arial",Font.BOLD,10));
-         Lbvalor.setForeground(Color.BLACK);
-         Lbvalor.setBounds(10,250,465,20);
-         this.add(Lbvalor);
- 
-         tfvalor = new JTextField();
-         tfvalor.setFont(new Font("Arial", Font.PLAIN, 18));
-         tfvalor.setForeground(Color.BLACK);
-         tfvalor.setBounds(100, 250, 80, 20);
-         this.add(tfvalor);
-
-        lbLogo = new JLabel(new ImageIcon("imagen.png"));
-        lbLogo.setBounds(250, 30, 205, 160);
-        this.add(lbLogo);
+        rbNoEsLibroDeLujo = new JRadioButton("NO");
+        rbNoEsLibroDeLujo.setFont(new Font("Serif", Font.PLAIN, 18));
+        rbNoEsLibroDeLujo.setBounds(450,175,60,30);
+        bgEsLibroDeLujo.add(rbNoEsLibroDeLujo);
+        this.add(rbNoEsLibroDeLujo);
 
         //Borde y titulo
          TitledBorder borde = BorderFactory.createTitledBorder("Datos Entrada");
@@ -124,39 +113,41 @@ public class PanelEntrada extends JPanel
     }
 
     //Metodos de acceso a la información
-    public String getTfnombre()
+    public static String getTfnombre()
     {
         return tfnombre.getText();
     }
 
-    public String getTfedad()
+    public static String getTfautor()
     {
-        return tfedad.getText();
+        return tfautor.getText();
     }
 
-    public String getTfannoI()
+    public static String getTfannoI()
     {
         return tfannoI.getText();
     }
 
-    public String getTfhoras()
+    public static boolean getRbLibroDeLujo()
     {
-        return tfhoras.getText();
-    }
-
-    public String getTfvalor()
-    {
-        return tfvalor.getText();
+        if (rbEsLibroDeLujo.isSelected())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     //Metodo para borrar las cajas de texto
-    public void borrar()
+    public static void borrar()
     {
         tfnombre.setText("");
-        tfedad.setText("");
+        tfautor.setText("");
         tfannoI.setText("");
-        tfhoras.setText("");
-        tfvalor.setText("");
+        bgEsLibroDeLujo.clearSelection();
+        PanelResultados.taResultado.setText("");
     }
 }
 
