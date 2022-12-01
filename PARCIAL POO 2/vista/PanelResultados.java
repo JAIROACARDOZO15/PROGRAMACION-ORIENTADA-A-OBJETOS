@@ -9,39 +9,51 @@ import javax.swing.border.TitledBorder;
 
 public class PanelResultados extends JPanel
 {
-    //----------------------
-    // Atributos
-    //----------------------
-    private JTextArea taResultado;
+    //---------------------------
+    // Atributos 
+    //---------------------------
+    public static JTextArea taResultado;
     private JScrollPane spResultado;
 
-    //----------------------
+    //---------------------------
     // Metodos
-    //----------------------
+    //---------------------------
 
-    //Constructor
+    //Metodo constructor
     public PanelResultados()
     {
-        //Definición del contenedor del panel
+        //Definir contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        this.setBackground(Color.CYAN);
 
-        //Crear y agregar area de texto Resultados
+        //Creacion y edicion del area de texto
         taResultado = new JTextArea();
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,20,360,150);
+        spResultado.setBounds(9,15,512,130);
         this.add(spResultado);
 
-        //Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
-        borde.setTitleColor(Color.BLUE);
+        //Borde y titulo
+        TitledBorder borde = BorderFactory.createTitledBorder("Datos Resultados");
+        borde.setTitleColor(Color.BLACK);
         this.setBorder(borde);
+        
+    }
+    //Borrar
+    public void borrar()
+    {
+        taResultado.setText("");
+    }
+    
+    //Mostrar resultado
+    public static void mostrarResultado(String texto)
+    {
+        taResultado.append(texto);
     }
 
-    //Metodos de acceso
-    public void mostrarResultado(String msj)
+    public void borrarTa()
     {
-        //taResultado.append(msj + "\n");
-        taResultado.setText(msj);
+        taResultado.setText("");
     }
-}
+    public static void mostrarResultados(String string) {
+    }
+}   

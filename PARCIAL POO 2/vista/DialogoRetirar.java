@@ -7,49 +7,54 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 
-public class DialogoConsignar extends JDialog
+public class DialogoRetirar extends JDialog
 {
     //----------------------
     // Atributos
     //----------------------
-    private JLabel lbConsignar;
-    private JTextField tfConsignar;
-    private JButton btConsignar;
+    private JLabel lbRetirar;
+    private JTextField tfRetirar;
+    private JButton btRetirar;
     private JLabel lbNombre;
     private JLabel lbCuenta;
+    private JLabel lbConsignar;
 
     //----------------------
     // Metodos
     //----------------------
-    public DialogoConsignar()
+    public DialogoRetirar()
     {
         //Definición del layout del Dialogo
         this.setLayout(null);
 
         //Crear y agregar elementos
-        lbConsignar = new JLabel("Consignar: ");
-        lbConsignar.setBounds(10,50,140,20);
-        this.add(lbConsignar);
+        lbRetirar = new JLabel("Retirar: ");
+        lbRetirar.setBounds(10,50,140,20);
+        this.add(lbRetirar);
 
         lbNombre = new JLabel();
         lbNombre.setBounds(150,30,100,25);
         this.add(lbNombre);
 
+        lbConsignar = new JLabel("Consignar: ");
+        lbConsignar.setBounds(10,30,100,25);
+        this.add(lbConsignar);
+
         lbCuenta = new JLabel("Cuenta: ");
         lbCuenta.setBounds(10,30,100,25);
         this.add(lbCuenta);
 
-        tfConsignar = new JTextField();
-        tfConsignar.setBounds(150,50,100, 25);
-        this.add(tfConsignar);
+        tfRetirar = new JTextField();
+        tfRetirar.setBounds(150,50,100, 25);
+        this.add(tfRetirar);
 
-        btConsignar = new JButton("COnsignar");
-        btConsignar.setBounds(20,140,260,25);
-        btConsignar.setActionCommand("consignar");
-        this.add(btConsignar);
+        btRetirar = new JButton("Retirar");
+        btRetirar.setBounds(20,140,260,25);
+        btRetirar.setActionCommand("retirar");
+        this.add(btRetirar);
 
         //Caracteristicas de la ventana
-        this.setTitle("Consignar");
+        this.setTitle("Retirar");
         this.setSize(300,300);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -57,17 +62,17 @@ public class DialogoConsignar extends JDialog
     }
 
     //Metodos de acceso
-    public String getConsignar()
+    public String getRetirar()
     {
-        return tfConsignar.getText();
+        return tfRetirar.getText();
     }
 
     public void agregarOyenteBoton(ActionListener pAL)
     {
-        btConsignar.addActionListener(pAL);
+        btRetirar.addActionListener(pAL);
     }
 
-    public void cerrarDialogoConsignar()
+    public void cerrarDialogoVenderCarro()
     {
         this.dispose();
     }
@@ -76,5 +81,6 @@ public class DialogoConsignar extends JDialog
     {
         //taResultado.append(msj + "\n");
         lbCuenta.setText(msj);
+        lbConsignar.setText(msj);
     }
 }

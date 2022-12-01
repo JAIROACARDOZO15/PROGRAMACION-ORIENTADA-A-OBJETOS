@@ -22,7 +22,7 @@ public class PanelEntradaDatos extends JPanel
     {
         //Definición del contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        this.setBackground(Color.CYAN);
 
         //Crear y agregar etiqueta empleados
         lbCuenta = new JLabel("Empleados: ", JLabel.RIGHT);
@@ -54,5 +54,8 @@ public class PanelEntradaDatos extends JPanel
     public void setCuenta(String emp)
     {
         cbCuenta.addItem(emp);
+    }
+
+    public static void borrar() {
     }
 }

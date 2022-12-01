@@ -12,12 +12,12 @@ public class PanelOperaciones extends JPanel
     //----------------------
     // Atributos
     //----------------------
-    private JButton btAgregarCuenta;
-    private JButton btConsignar;
-    private JButton btRetirar;
-    private JButton btSaldo;
-    private JButton btIntereses;;
-    private JButton btSalir;
+    public JButton btAgregarCuenta;
+    public JButton btConsignar;
+    public JButton btRetirar;
+    public JButton btSaldo;
+    public JButton btIntereses;;
+    public JButton btSalir;
 
     //----------------------
     // Metodos
@@ -28,7 +28,7 @@ public class PanelOperaciones extends JPanel
     {
         //Definición del contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        this.setBackground(Color.CYAN);
 
         //Crear y agregar boton AgregarCuenta
         btAgregarCuenta = new JButton("Agregar Cuenta");
