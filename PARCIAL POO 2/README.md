@@ -11,3 +11,6 @@ En estas condiciones:
 1. Construir el diagrama de clases requerido.
 2. Programar las clases necesarias.
 3. La app debe permitir crear objetos de las distintas clases, inicializando las cuentas con un valor inicial. Ademas, debe permitir consingar y retirar fondos de cada una de las cuentas, actualizando saldos y respectivos intereses.
+
+## PANTALLAZOS
+![imagen](imagen.png)
